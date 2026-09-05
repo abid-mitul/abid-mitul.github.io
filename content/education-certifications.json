@@ -1,0 +1,14 @@
+{
+  "education": [
+    {
+      "degree": "M.Sc. in Mathematics",
+      "institution": "Dhaka University of Engineering & Technology",
+      "location": "Gazipur, Bangladesh"
+    },
+    {
+      "degree": "B.Sc. in Electronics & Telecommunication Engineering",
+      "institution": "Rajshahi University of Engineering & Technology",
+      "location": "Rajshahi, Bangladesh"
+    }
+  ]
+}
