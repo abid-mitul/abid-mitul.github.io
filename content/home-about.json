@@ -1,11 +1,17 @@
 {
   "name": "Md Abid Hassan Mitul",
   "tagline": "Automation Engineer building enterprise systems on Power Platform",
-  "photo": "",
+  "photo": "/uploads/whatsapp-image-2026-08-20-at-12.29.03-pm.jpeg",
   "summary": "I design and build automation systems for manufacturing and enterprise operations — from Power Apps and Power Automate solutions to OT/IT integration across industrial SCADA and MES systems. My work spans product management, enterprise automation, and applied machine learning, grounded in a background in electronics/telecommunication engineering and mathematics.",
   "resume": "",
   "social_links": [
-    { "platform": "LinkedIn", "url": "https://linkedin.com/in/mitul-abid" },
-    { "platform": "GitHub", "url": "https://github.com/abid-mitul" }
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/mitul-abid"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/abid-mitul"
+    }
   ]
 }
