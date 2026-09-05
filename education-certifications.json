@@ -1,0 +1,30 @@
+{
+  "education": [
+    {
+      "degree": "M.Sc. in Mathematics",
+      "institution": "Dhaka University of Engineering & Technology (DUET)",
+      "start_date": "",
+      "end_date": "",
+      "location": "Gazipur, Bangladesh",
+      "description": "Thesis on deep reinforcement learning approaches for industrial resource allocation."
+    },
+    {
+      "degree": "B.Sc. in Electronics and Telecommunication Engineering",
+      "institution": "Rajshahi University of Engineering & Technology (RUET)",
+      "start_date": "",
+      "end_date": "",
+      "location": "Rajshahi, Bangladesh",
+      "description": ""
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Microsoft Azure Administrator",
+      "issuer": "Microsoft",
+      "date": "",
+      "credential_url": "",
+      "image": ""
+    }
+  ],
+  "training": []
+}

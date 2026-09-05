@@ -1,0 +1,407 @@
+/* =========================================================
+   DESIGN TOKENS
+========================================================= */
+:root {
+  --bg: #0F1115;
+  --panel: #171A21;
+  --border: #2A2E38;
+  --text: #E8E6E0;
+  --text-muted: #8B909C;
+  --accent: #E8A33D;
+  --accent-teal: #4FA3A0;
+
+  --font-display: 'Archivo', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+
+  --spine-x: 48px;
+  --content-max: 720px;
+  --section-gap: 96px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --spine-x: 22px;
+    --section-gap: 64px;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { color: var(--accent-teal); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--text);
+}
+
+p { margin: 0 0 1em 0; max-width: 62ch; }
+
+/* =========================================================
+   NAV
+========================================================= */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px var(--spine-x);
+  background: rgba(15, 17, 21, 0.88);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+
+.topnav .mark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.topnav .mark span { color: var(--accent); }
+
+.topnav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.topnav a {
+  color: var(--text-muted);
+  font-size: 14.5px;
+}
+.topnav a:hover { color: var(--text); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+@media (max-width: 760px) {
+  .topnav ul {
+    position: fixed;
+    top: 58px; left: 0; right: 0;
+    flex-direction: column;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 12px var(--spine-x) 20px;
+    gap: 14px;
+    display: none;
+  }
+  .topnav ul.open { display: flex; }
+  .nav-toggle { display: inline-block; }
+}
+
+/* =========================================================
+   SPINE / WIRE MOTIF
+========================================================= */
+.wire-track {
+  position: absolute;
+  left: var(--spine-x);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  z-index: 0;
+}
+.wire-track::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 1px; height: 100%;
+  background: var(--border);
+}
+.wire-track .wire-fill {
+  position: absolute;
+  left: 0; top: 0;
+  width: 1px; height: 0%;
+  background: linear-gradient(var(--accent), var(--accent-teal));
+  animation: draw-wire 1.8s ease-out forwards;
+}
+@keyframes draw-wire {
+  to { height: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wire-track .wire-fill { height: 100%; animation: none; }
+}
+
+.node-dot {
+  position: absolute;
+  left: calc(var(--spine-x) - 4px);
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--border);
+  border: 1px solid var(--bg);
+}
+.node-dot.lit { background: var(--accent); }
+
+/* =========================================================
+   LAYOUT SHELL
+========================================================= */
+main { position: relative; }
+
+section {
+  position: relative;
+  padding: 64px var(--spine-x) 0 calc(var(--spine-x) + 40px);
+  margin-bottom: var(--section-gap);
+}
+
+.section-label {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  font-size: clamp(26px, 3.4vw, 36px);
+  margin-bottom: 32px;
+  max-width: var(--content-max);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero {
+  padding-top: 88px;
+  padding-bottom: 20px;
+  margin-bottom: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hero-copy { flex: 1 1 420px; max-width: 640px; }
+
+.hero-copy h1 {
+  font-size: clamp(34px, 5.5vw, 54px);
+  line-height: 1.08;
+  margin-bottom: 18px;
+}
+
+.hero-copy .tagline {
+  font-size: 19px;
+  color: var(--text-muted);
+  max-width: 46ch;
+  margin-bottom: 28px;
+}
+
+.hero-copy .summary {
+  color: var(--text);
+  max-width: 58ch;
+}
+
+.hero-links {
+  display: flex;
+  gap: 18px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+.hero-links a {
+  font-size: 14.5px;
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 2px;
+  color: var(--text);
+}
+.hero-links a:hover {
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+}
+
+.hero-photo-frame {
+  flex: 0 0 auto;
+  width: 168px;
+  height: 168px;
+  border: 1px solid var(--border);
+  padding: 6px;
+  position: relative;
+}
+.hero-photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.4);
+}
+.hero-photo-frame::before,
+.hero-photo-frame::after {
+  content: "";
+  position: absolute;
+  width: 5px; height: 5px;
+  background: var(--border);
+  border-radius: 50%;
+}
+.hero-photo-frame::before { top: 4px; left: 4px; }
+.hero-photo-frame::after { bottom: 4px; right: 4px; }
+
+@media (max-width: 640px) {
+  .hero { padding-top: 60px; }
+  .hero-photo-frame { display: none; }
+}
+
+/* =========================================================
+   PANELS (replace default "cards")
+========================================================= */
+.panel {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 22px 24px;
+}
+.panel::before, .panel::after {
+  content: "";
+  position: absolute;
+  width: 4px; height: 4px;
+  background: var(--border);
+  border-radius: 50%;
+}
+.panel::before { top: 8px; left: 8px; }
+.panel::after { bottom: 8px; right: 8px; }
+
+.panel h3, .panel h4 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.panel .meta {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 2px 0 10px 0;
+}
+.panel .dates {
+  color: var(--accent-teal);
+  font-size: 13.5px;
+  margin: 0 0 10px 0;
+}
+.panel .desc { margin-top: 8px; color: var(--text); }
+.panel .desc p:last-child { margin-bottom: 0; }
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.stack { display: flex; flex-direction: column; gap: 18px; max-width: var(--content-max); }
+
+/* =========================================================
+   EDUCATION / CERT / TRAINING
+========================================================= */
+.subsection { margin-bottom: 40px; }
+.subsection:last-child { margin-bottom: 0; }
+.subsection h3.group-title {
+  font-size: 15px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.cert-item { display: flex; gap: 14px; align-items: flex-start; }
+.cert-badge { width: 44px; height: 44px; object-fit: contain; flex-shrink: 0; }
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+.project-item .tech-stack {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin: 10px 0;
+}
+.project-item .tag {
+  font-size: 12.5px;
+  color: var(--accent-teal);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.project-image {
+  width: 100%; max-height: 160px; object-fit: cover;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+}
+.project-links { display: flex; gap: 16px; margin-top: 10px; }
+
+/* =========================================================
+   SKILLS
+========================================================= */
+.skill-group { margin-bottom: 22px; }
+.skill-group h4 {
+  font-size: 14px; color: var(--text-muted); font-weight: 500; margin-bottom: 10px;
+}
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tag {
+  font-size: 14px;
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  color: var(--text);
+}
+.skill-tag small { color: var(--text-muted); }
+
+.hobby-item { margin-bottom: 14px; }
+.hobby-item h4 { font-size: 15px; margin-bottom: 2px; }
+.hobby-item p { color: var(--text-muted); font-size: 14.5px; margin-bottom: 0; }
+
+/* =========================================================
+   CONTACT
+========================================================= */
+.contact-grid {
+  display: flex; flex-wrap: wrap; gap: 56px;
+}
+.contact-block { flex: 1 1 260px; }
+.contact-block .field { margin-bottom: 14px; }
+.contact-block .field-label {
+  font-size: 13px; color: var(--text-muted); margin-bottom: 2px;
+}
+.contact-block .field-value { font-size: 16px; }
+#contact-links { display: flex; gap: 18px; margin-top: 6px; }
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  padding: 32px var(--spine-x) 48px;
+  color: var(--text-muted);
+  font-size: 13.5px;
+  border-top: 1px solid var(--border);
+}
+
+/* Empty-state note (shown when a JSON list is empty) */
+.empty-note {
+  color: var(--text-muted);
+  font-size: 14.5px;
+  font-style: italic;
+}

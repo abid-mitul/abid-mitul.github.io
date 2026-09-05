@@ -1,0 +1,199 @@
+backend:
+  name: github
+  repo: abid-mitul/abid-mitul.github.io
+  branch: main
+  base_url: https://api.netlify.com # OAuth proxy - see setup notes
+  auth_endpoint: auth
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+
+  # ============================================================
+  # 1. HOME PAGE & ABOUT ME
+  # ============================================================
+  - name: "home_about"
+    label: "1. Home & About Me"
+    files:
+      - file: "content/home-about.json"
+        label: "Home & About Me"
+        name: "home_about"
+        format: "json"
+        fields:
+          - { label: "Full Name", name: "name", widget: "string" }
+          - { label: "Tagline / Title", name: "tagline", widget: "string" }
+          - { label: "Profile Photo", name: "photo", widget: "image", required: false }
+          - { label: "About Summary", name: "summary", widget: "markdown" }
+          - { label: "Resume/CV File", name: "resume", widget: "file", required: false }
+          - label: "Social Links"
+            name: "social_links"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Platform", name: "platform", widget: "string", hint: "e.g. LinkedIn, GitHub" }
+              - { label: "URL", name: "url", widget: "string" }
+
+  # ============================================================
+  # 2. EDUCATION & CERTIFICATIONS
+  # ============================================================
+  - name: "education_certifications"
+    label: "2. Education & Certifications"
+    files:
+      - file: "content/education-certifications.json"
+        label: "Education & Certifications"
+        name: "education_certifications"
+        format: "json"
+        fields:
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "Degree", name: "degree", widget: "string" }
+              - { label: "Institution", name: "institution", widget: "string" }
+              - { label: "Start Date", name: "start_date", widget: "date", required: false }
+              - { label: "End Date", name: "end_date", widget: "date", required: false }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "markdown", required: false }
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - { label: "Certification Name", name: "title", widget: "string" }
+              - { label: "Issuer", name: "issuer", widget: "string" }
+              - { label: "Date Issued", name: "date", widget: "date" }
+              - { label: "Credential URL", name: "credential_url", widget: "string", required: false }
+              - { label: "Badge/Certificate Image", name: "image", widget: "image", required: false }
+          - label: "Training"
+            name: "training"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Course/Training Title", name: "title", widget: "string" }
+              - { label: "Provider", name: "provider", widget: "string" }
+              - { label: "Date", name: "date", widget: "date" }
+              - { label: "Certificate/Proof", name: "attachment", widget: "file", required: false }
+              - { label: "Description", name: "description", widget: "markdown", required: false }
+
+  # ============================================================
+  # 3. RESEARCH & PUBLICATIONS
+  # ============================================================
+  - name: "research_publications"
+    label: "3. Research & Publications"
+    files:
+      - file: "content/research-publications.json"
+        label: "Research & Publications"
+        name: "research_publications"
+        format: "json"
+        fields:
+          - label: "Research"
+            name: "research"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Area/Field", name: "area", widget: "string", required: false }
+              - { label: "Date", name: "date", widget: "date" }
+              - { label: "Collaborators", name: "collaborators", widget: "list", required: false }
+              - { label: "Description", name: "description", widget: "markdown", required: false }
+              - { label: "Link", name: "link", widget: "string", required: false }
+          - label: "Publications"
+            name: "publications"
+            widget: "list"
+            fields:
+              - { label: "Paper Title", name: "title", widget: "string" }
+              - { label: "Journal/Conference", name: "venue", widget: "string" }
+              - { label: "Publication Date", name: "date", widget: "date" }
+              - { label: "Authors", name: "authors", widget: "list" }
+              - { label: "DOI / Link", name: "link", widget: "string", required: false }
+              - { label: "Abstract", name: "abstract", widget: "markdown", required: false }
+
+  # ============================================================
+  # 4. PROFESSIONAL EXPERIENCE & PROJECTS
+  # ============================================================
+  - name: "experience_projects"
+    label: "4. Experience & Projects"
+    files:
+      - file: "content/experience-projects.json"
+        label: "Experience & Projects"
+        name: "experience_projects"
+        format: "json"
+        fields:
+          - label: "Work Experience"
+            name: "experience"
+            widget: "list"
+            fields:
+              - { label: "Job Title", name: "title", widget: "string" }
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Start Date", name: "start_date", widget: "date" }
+              - { label: "End Date", name: "end_date", widget: "date", required: false, hint: "Leave blank if current" }
+              - { label: "Currently Working Here", name: "current", widget: "boolean", default: false }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Responsibilities/Achievements", name: "description", widget: "markdown" }
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Project Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Tech Stack", name: "tech_stack", widget: "list" }
+              - { label: "Date", name: "date", widget: "date" }
+              - { label: "Cover Image", name: "image", widget: "image", required: false }
+              - { label: "Repo Link", name: "repo_link", widget: "string", required: false }
+              - { label: "Demo Link", name: "demo_link", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "markdown" }
+
+  # ============================================================
+  # 5. SKILLS & HOBBIES
+  # ============================================================
+  - name: "skills_hobbies"
+    label: "5. Skills & Hobbies"
+    files:
+      - file: "content/skills-hobbies.json"
+        label: "Skills & Hobbies"
+        name: "skills_hobbies"
+        format: "json"
+        fields:
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Skill Name", name: "name", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Technical", "Software/Tools", "Language", "Soft Skill", "Other"]
+              - label: "Proficiency"
+                name: "level"
+                widget: "select"
+                required: false
+                options: ["Beginner", "Intermediate", "Advanced", "Expert"]
+          - label: "Hobbies & Interests"
+            name: "hobbies"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+
+  # ============================================================
+  # 6. CONTACT & COLLABORATION
+  # ============================================================
+  - name: "contact"
+    label: "6. Contact & Collaboration"
+    files:
+      - file: "content/contact.json"
+        label: "Contact & Collaboration"
+        name: "contact"
+        format: "json"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
+          - { label: "Location", name: "location", widget: "string", required: false }
+          - { label: "Availability Message", name: "availability", widget: "text", required: false, hint: "e.g. Open to freelance / consulting" }
+          - { label: "Collaboration Interests", name: "collaboration_note", widget: "markdown", required: false }
+          - label: "Social/Contact Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Platform", name: "platform", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }

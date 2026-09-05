@@ -1,0 +1,93 @@
+{
+  "experience": [
+    {
+      "title": "Automation Engineer",
+      "company": "Floreal Bangladesh (Ciel Textile Group)",
+      "start_date": "",
+      "end_date": "",
+      "current": true,
+      "location": "Ashulia, Bangladesh",
+      "description": "Leading Power Platform development across Power Apps, Power Automate, and SharePoint/Microsoft Lists to automate operational workflows. Built 15+ live production systems used across the site, spanning gate pass tracking, sample management, recipe digitization, and attendance prediction."
+    },
+    {
+      "title": "System Administrator",
+      "company": "SDS International Ltd (Gildan)",
+      "start_date": "",
+      "end_date": "",
+      "current": false,
+      "location": "",
+      "description": ""
+    },
+    {
+      "title": "Product Development Engineer",
+      "company": "Desh Universal",
+      "start_date": "",
+      "end_date": "",
+      "current": false,
+      "location": "",
+      "description": "Led development of CloudCampus24, an ERP/CRM platform deployed across 260+ educational institutes."
+    }
+  ],
+  "projects": [
+    {
+      "title": "FlorealGPT",
+      "summary": "Internal company AI assistant connecting company knowledge, production/quality/planning data, and customer/machine manuals.",
+      "tech_stack": [],
+      "date": "",
+      "image": "",
+      "repo_link": "",
+      "demo_link": "",
+      "description": ""
+    },
+    {
+      "title": "Gate Pass Dashboard",
+      "summary": "Hourly Power Automate + Power App real-time dashboard for the Gate Pass/Challan SharePoint list at Floreal Bangladesh.",
+      "tech_stack": ["Power Automate", "Power Apps", "SharePoint"],
+      "date": "",
+      "image": "",
+      "repo_link": "",
+      "demo_link": "",
+      "description": ""
+    },
+    {
+      "title": "Internal Size Sample (ISS) Tracker",
+      "summary": "Power Apps/SharePoint solution to track garment samples through production stages.",
+      "tech_stack": ["Power Apps", "SharePoint"],
+      "date": "",
+      "image": "",
+      "repo_link": "",
+      "demo_link": "",
+      "description": ""
+    },
+    {
+      "title": "Washing Recipe Chart Digitization",
+      "summary": "SharePoint List + Power Apps + Power Automate solution replacing the Excel-based washing recipe sheet at Ajax Sweater Ltd/Floreal.",
+      "tech_stack": ["Power Apps", "Power Automate", "SharePoint"],
+      "date": "",
+      "image": "",
+      "repo_link": "",
+      "demo_link": "",
+      "description": ""
+    },
+    {
+      "title": "Attendance Predictor",
+      "summary": "Machine learning pipeline predicting attendance from biometric punch log data.",
+      "tech_stack": ["Python"],
+      "date": "",
+      "image": "",
+      "repo_link": "",
+      "demo_link": "",
+      "description": ""
+    },
+    {
+      "title": "CloudCampus24",
+      "summary": "ERP/CRM platform for educational institutes, deployed across 260+ institutes.",
+      "tech_stack": [],
+      "date": "",
+      "image": "",
+      "repo_link": "",
+      "demo_link": "",
+      "description": ""
+    }
+  ]
+}

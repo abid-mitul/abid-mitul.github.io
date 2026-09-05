@@ -1,0 +1,38 @@
+{
+  "research": [
+    {
+      "title": "Deep Reinforcement Learning for Industrial Resource Allocation",
+      "area": "M.Sc. Thesis Research",
+      "date": "",
+      "collaborators": [],
+      "description": "Statistical and machine learning approaches applied to industrial resource allocation problems.",
+      "link": ""
+    }
+  ],
+  "publications": [
+    {
+      "title": "",
+      "venue": "IEEE",
+      "date": "",
+      "authors": [],
+      "link": "",
+      "abstract": ""
+    },
+    {
+      "title": "",
+      "venue": "IEEE",
+      "date": "",
+      "authors": [],
+      "link": "",
+      "abstract": ""
+    },
+    {
+      "title": "",
+      "venue": "IEEE",
+      "date": "",
+      "authors": [],
+      "link": "",
+      "abstract": ""
+    }
+  ]
+}

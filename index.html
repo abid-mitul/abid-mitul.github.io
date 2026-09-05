@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Md Abid Hassan Mitul — Automation Engineer</title>
+<meta name="description" content="Portfolio of Md Abid Hassan Mitul — Automation Engineer working across Power Platform, enterprise automation, and applied machine learning." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="mark">abid<span>.</span>mitul</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">Menu</button>
+  <ul id="navList">
+    <li><a href="#home-about-section">About</a></li>
+    <li><a href="#education-certifications-section">Education</a></li>
+    <li><a href="#research-publications-section">Research</a></li>
+    <li><a href="#experience-projects-section">Work</a></li>
+    <li><a href="#skills-hobbies-section">Skills</a></li>
+    <li><a href="#contact-section">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="wire-track" id="wireTrack" aria-hidden="true">
+  <div class="wire-fill"></div>
+</div>
+
+<main>
+
+  <!-- ================= 1. HOME & ABOUT ME ================= -->
+  <section id="home-about-section" class="hero">
+    <span class="node-dot lit" style="top: 96px;" aria-hidden="true"></span>
+    <div class="hero-copy">
+      <h1 id="about-name">&nbsp;</h1>
+      <p class="tagline" id="about-tagline"></p>
+      <div class="summary" id="about-summary"></div>
+      <div class="hero-links" id="about-social-links">
+        <a id="about-resume-link" href="#" style="display:none;">Download résumé</a>
+      </div>
+    </div>
+    <div class="hero-photo-frame">
+      <img id="about-photo" src="" alt="Profile photo" onerror="this.parentElement.style.display='none'" />
+    </div>
+  </section>
+
+  <!-- ================= 2. EDUCATION & CERTIFICATIONS ================= -->
+  <section id="education-certifications-section">
+    <span class="node-dot" aria-hidden="true"></span>
+    <h2 class="section-heading">Education &amp; certifications</h2>
+
+    <div class="subsection">
+      <h3 class="group-title">Education</h3>
+      <div class="stack" id="education-list"></div>
+    </div>
+
+    <div class="subsection">
+      <h3 class="group-title">Certifications</h3>
+      <div class="panel-grid" id="certifications-list"></div>
+    </div>
+
+    <div class="subsection" id="training-subsection">
+      <h3 class="group-title">Training</h3>
+      <div class="stack" id="training-list"></div>
+    </div>
+  </section>
+
+  <!-- ================= 3. RESEARCH & PUBLICATIONS ================= -->
+  <section id="research-publications-section">
+    <span class="node-dot" aria-hidden="true"></span>
+    <h2 class="section-heading">Research &amp; publications</h2>
+
+    <div class="subsection">
+      <h3 class="group-title">Research</h3>
+      <div class="stack" id="research-list"></div>
+    </div>
+
+    <div class="subsection">
+      <h3 class="group-title">Publications</h3>
+      <div class="stack" id="publications-list"></div>
+    </div>
+  </section>
+
+  <!-- ================= 4. EXPERIENCE & PROJECTS ================= -->
+  <section id="experience-projects-section">
+    <span class="node-dot" aria-hidden="true"></span>
+    <h2 class="section-heading">Experience &amp; projects</h2>
+
+    <div class="subsection">
+      <h3 class="group-title">Professional experience</h3>
+      <div class="stack" id="experience-list"></div>
+    </div>
+
+    <div class="subsection">
+      <h3 class="group-title">Projects</h3>
+      <div class="panel-grid" id="projects-list"></div>
+    </div>
+  </section>
+
+  <!-- ================= 5. SKILLS & HOBBIES ================= -->
+  <section id="skills-hobbies-section">
+    <span class="node-dot" aria-hidden="true"></span>
+    <h2 class="section-heading">Skills &amp; hobbies</h2>
+
+    <div class="subsection">
+      <div id="skills-list"></div>
+    </div>
+
+    <div class="subsection" id="hobbies-subsection">
+      <h3 class="group-title">Outside of work</h3>
+      <div id="hobbies-list"></div>
+    </div>
+  </section>
+
+  <!-- ================= 6. CONTACT & COLLABORATION ================= -->
+  <section id="contact-section">
+    <span class="node-dot" aria-hidden="true"></span>
+    <h2 class="section-heading">Contact &amp; collaboration</h2>
+
+    <div class="contact-grid">
+      <div class="contact-block">
+        <div class="field">
+          <div class="field-label">Email</div>
+          <a class="field-value" id="contact-email"></a>
+        </div>
+        <div class="field">
+          <div class="field-label">Phone</div>
+          <div class="field-value" id="contact-phone"></div>
+        </div>
+        <div class="field">
+          <div class="field-label">Location</div>
+          <div class="field-value" id="contact-location"></div>
+        </div>
+      </div>
+      <div class="contact-block">
+        <p id="contact-availability"></p>
+        <div id="contact-collaboration-note"></div>
+        <div id="contact-links"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Md Abid Hassan Mitul. Built with a static site + Decap CMS.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navList').classList.toggle('open');
+  });
+  // position node dots relative to their section tops
+  window.addEventListener('load', () => {
+    document.querySelectorAll('section').forEach(sec => {
+      const dot = sec.querySelector('.node-dot');
+      if (dot && !dot.style.top) {
+        dot.style.top = (sec.offsetTop - (document.querySelector('main').offsetTop || 0) + 68) + 'px';
+      }
+    });
+  });
+</script>
+<script src="assets/js/content-loader.js"></script>
+</body>
+</html>

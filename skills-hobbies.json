@@ -1,0 +1,16 @@
+{
+  "skills": [
+    { "name": "Power Apps", "category": "Technical", "level": "Expert" },
+    { "name": "Power Automate", "category": "Technical", "level": "Expert" },
+    { "name": "SharePoint", "category": "Technical", "level": "Expert" },
+    { "name": "SQL", "category": "Technical", "level": "Advanced" },
+    { "name": "Python", "category": "Technical", "level": "Intermediate" },
+    { "name": "JavaScript", "category": "Technical", "level": "Intermediate" },
+    { "name": "SCADA/MES Integration", "category": "Technical", "level": "Advanced" },
+    { "name": "RPA", "category": "Technical", "level": "Advanced" },
+    { "name": "Product Management", "category": "Soft Skill", "level": "" },
+    { "name": "Bengali", "category": "Language", "level": "Native" },
+    { "name": "English", "category": "Language", "level": "Advanced (CEFR C1)" }
+  ],
+  "hobbies": []
+}
