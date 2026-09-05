@@ -3,6 +3,7 @@ backend:
   repo: abid-mitul/abid-mitul.github.io
   branch: main
   base_url: https://api.netlify.com # OAuth proxy - see setup notes
+  site_id: jocular-cassata-4a7db4.netlify.app
   auth_endpoint: auth
 
 media_folder: "uploads"
