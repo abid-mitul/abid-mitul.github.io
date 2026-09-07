@@ -2,8 +2,13 @@
   "research": [
     {
       "title": "Spectrum Management, Millimeter-Wave Integration, Energy Efficiency, and Cooperative CSI Feedback in D2D-Enabled 5G Massive MIMO Networks",
-      "area": "5G and Beyond 5G Wireless Networks, Device-to-Device (D2D) Communications, Millimeter-Wave (mmWave) Networks, Massive MIMO Systems",
+      "area": "B.Sc. Thesis",
       "description": "This thesis investigates hybrid mmWave/microwave switching strategies, energy efficiency optimizations, and cooperative D2D-assisted CSI feedback mechanisms to enhance coverage and performance in 5G massive MIMO networks."
+    },
+    {
+      "title": "Stochastic Modeling and Deep Reinforcement Learning for Adaptive Server Allocation in Industrial SCADA Networks",
+      "area": "M.Sc. Thesis",
+      "description": "This thesis develops a unified stochastic framework using Continuous-Time Markov Chains and M/M/c/K queueing models to analyze network congestion, and applies Deep Reinforcement Learning (DRL) via Proximal Policy Optimization to achieve real-time, adaptive server allocation in industrial SCADA systems."
     }
   ],
   "publications": [
