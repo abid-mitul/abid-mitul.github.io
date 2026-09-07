@@ -20,5 +20,31 @@
       "institution": "Gazipur Cantonment Board High School",
       "location": "Gazipur, Bangladesh"
     }
+  ],
+  "certifications": [
+    {
+      "title": "Agile Project Management Professional Certificate",
+      "issuer": "Atlassian"
+    },
+    {
+      "title": "Product Management Professional Certificate",
+      "issuer": "Aha!"
+    },
+    {
+      "title": "Machine Learning",
+      "issuer": "Stanford Online"
+    },
+    {
+      "title": "Microsoft Azure Administrator",
+      "issuer": "Microsoft"
+    },
+    {
+      "title": "Microsoft SQL Server DBA",
+      "issuer": "Udemy"
+    },
+    {
+      "title": "Lean Six Sigma White Belt",
+      "issuer": "Six Sigma Online"
+    }
   ]
 }
