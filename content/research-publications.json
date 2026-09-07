@@ -39,6 +39,24 @@
         "Md Munjure Mowla"
       ],
       "abstract": "This research evaluates a cooperative CSI feedback scheme utilizing D2D communication for FDD massive MIMO systems, demonstrating superior sum-rate performance and reduced delay compared to conventional feedback methods."
+    },
+    {
+      "title": "Congestion-Coupled Communication Delay Modeling in High-Density Textile SCADA Networks: A Continuous-Time Markov Chain and M/M/c/K Queueing Analysis",
+      "venue": "ICERIE 2027",
+      "authors": [
+        "Md Abid Hassan Mitul",
+        "Most Nasrin Akhter"
+      ],
+      "abstract": "This study develops a stochastic framework utilizing a three-state Continuous-Time Markov Chain and an M/M/c/K queueing model to analyze task arrivals and model non-linear communication delays under high-density textile SCADA network congestion."
+    },
+    {
+      "title": "Proximal Policy Optimization for Adaptive Server Allocation in Stochastic Industrial SCADA Systems: A Deep Reinforcement Learning Approach for Textile Manufacturing",
+      "venue": "ICERIE 2027",
+      "authors": [
+        "Md Abid Hassan Mitul",
+        "Most Nasrin Akhter"
+      ],
+      "abstract": "This study formulates industrial server allocation as a Markov Decision Process and applies a Proximal Policy Optimization deep reinforcement learning agent to dynamically optimize active servers, thereby minimizing latency and service level violations."
     }
   ]
 }
