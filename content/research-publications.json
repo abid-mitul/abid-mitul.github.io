@@ -19,6 +19,15 @@
       ],
       "link": "",
       "abstract": "In spite of having great potential supremacy, device-to-device (D2D) communications are facing lack of implementation in large scale. Insufficient bandwidth with high interference in the micro wave (μWave) band is the crucial complication behind it. Enabling D2D communications in millimeter wave (mmWave) band is considered as an alternative solution to these problems. However, line-of-sight (LOS) is a prerequisite for D2D devices to enable links in mmWave bands. In this paper, a distributed method is considered by which D2D devices can detect the existing LOS link for mmWave communication and further perform beam alignment. If there is scarcity of LOS link, this method permits the D2D devices to switch to μWave band. Stochastic geometry is considered for system modeling and analysis of this method. Various network criteria such as reference distance, blockage density, frequency, gain of antenna, beam width, density of D2D transmitters, power for D2D and path loss exponents for both LOS and NLOS links are taken into account for analyzing D2D network SINR (signal-to-interference-plus-noise-ratio) coverage probability against SINR threshold. Simulation results reveal that this distributed method has the better coverage probability compared to independently implied mmWave and μWave communication."
+    },
+    {
+      "title": "Investigation of Energy Efficiency in Underlaid D2D Assisted 5G Cellular Network",
+      "venue": "2019 3rd International Conference on Electrical, Computer & Telecommunication Engineering (ICECTE)",
+      "authors": [
+        "Md Abid Hassan Mitul",
+        "Md Munjure Mowla"
+      ],
+      "abstract": "Next generation wireless standard 5G is expected to meet huge spectrum demand by enabling new technology, i.e., device to device communication (D2D). This technology enhances spectrum efficiency (SE) while interference management due to device proximity is challenging by coordinating transmission power between cellular and D2D users, i.e., underlaid approach. Another key design requirement fr 5G is energy efficiency (EE). In this research, we investigate the EE of cellular network which is underlaid with D2D for multiple bands while considering several network criteria such as different bandwidths (BW), path loss exponents (PLE), transmission power required for cellular users (CU) and D2D users (DU), reference distances between CU and DU, outage threshold for DU, user density for CU and DU upon the changes. Simulation results demonstrate the truthful impact of these parameters."
     }
   ]
 }
